@@ -1,0 +1,37 @@
+﻿@using ShenDeng.Framework.Tools
+
+@{
+    ViewBag.Title = "注册";
+    Layout = "~/Views/Shared/Account_Layout.cshtml";
+}
+
+<h3>神灯的小屋</h3>
+@ViewData[Keys.ErrorMessage]
+@using (Html.BeginForm("Regist", "Account", FormMethod.Post))
+{
+    <div class="input_outer">
+        <span class="u_user"></span>
+        @Html.TextBox(Keys.UserName, "", new { @class = "text", @style = "color: #000000 !important", placeholder = "请输入账户" })
+    </div>
+    <div class="input_outer">
+        <span class="us_uer"></span>
+        @Html.Password(Keys.PassWord, "", new { @class = "text", @style = "color: #000000 !important", placeholder = "请输入密码" })
+    </div>
+    <div class="input_outer">
+        <span class="us_uer"></span>
+        @Html.Password(Keys.ConPassWord, "", new { @class = "text", @style = "color: #000000 !important", placeholder = "确认密码" })
+    </div>
+      
+    <div class="input_outer" style="width: 160px">
+        @Html.TextBox(Keys.VefCode, "", new { @class = "text_vef", @style = "color:#000000 !important", placeholder = "输入验证码" }) 
+        <div style="margin-left: 160px; margin-top: -40px">
+            <img src="/Account/GetImg" alt="刷新更换验证码" />
+        </div>
+    </div>
+
+
+    <li>已有账户！点击 @Html.ActionLink("登录", "Login")</li>
+    <button class="act-but submit" type="submit" style="width: 330px; color: #FFFFFF">注册</button>
+}
+
+

@@ -1,0 +1,19 @@
+﻿@using ShenDeng.Framework.Domain
+@using ShenDeng.Framework.Tools
+
+@{
+    ViewBag.Title = "首页";
+    Layout = "~/Views/Shared/Home_Layout.cshtml";
+}
+
+
+
+@if ((HttpContext.Current.Session[Keys.Account] as Account) == null)
+{
+    @Html.ActionLink("登录", "Login", "Account")
+}
+else
+{
+    var account = HttpContext.Current.Session[Keys.Account] as Account;
+    <span>@account.Id.UserName | </span> @Html.ActionLink("注销", "SignOut", "Account")
+}

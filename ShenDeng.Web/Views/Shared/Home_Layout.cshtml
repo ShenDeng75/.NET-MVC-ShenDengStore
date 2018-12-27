@@ -1,0 +1,337 @@
+﻿@using ShenDeng.Framework.Tools
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+    <title>神灯的小屋</title>
+    <meta name="keywords" content="bootstrap, clothing, ecommerce, elegant, fashion, fashion boutique, fashion store, fashion template, minimal, minimalistic, modern, online shop, online store, psd template, woocommerce">
+    <meta name="description" content=" A modern & minimalistic eCommerce PSD Template is a clean and elegant design – suitable for selling clothing, fashion, high fashion, men fashion, women fashion & accessories.">
+    <meta name="author" content="">
+
+    <!--图标-->
+    <link rel="shortcut icon" type="image/png" href="~/Content/img/OA_img/favicon.png" />
+
+    <!--谷歌字体-->
+    <link href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps%7CDroid+Sans:400,700%7CLibre+Baskerville:400,400i%7CPermanent+Marker%7CCutive+Mono" rel="stylesheet">
+
+    <!--CSS库-->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/OA_css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/OA_css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/OA_css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/OA_css/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/OA_css/font.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/OA_css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/OA_css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/OA_css/jquery.fullpage.min.css" />
+
+    <!-- 主要的CSS -->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/OA_css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/OA_css/responsive.css" />
+
+    <!--颜色皮肤-->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/OA_css/default.css" />
+</head>
+
+<body>
+
+<div class="outer-wrapper">
+<header class="header-2" data-spy="affix" data-offset-top="205">
+    <!--最上边黑色的一条-->
+    <div class="top-bar outer-wrap bg-dark txt-white">
+        <div class="row">
+            <div class="col-md-6 col-sm-6">神灯小屋 用于记录学习和分享</div>
+            <div class="col-md-6 col-sm-6 text-right">
+                <ul class="top-bar-menu">
+                    <li>
+                        帮助 <i class="fa fa-angle-down"></i>
+                        <ul>
+                            <li><a href="#">查看文档</a></li>
+                            <li><a href="#">联系站长</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        关于 <i class="fa fa-angle-down"></i>
+                        <ul>
+                            <li><a href="#">关于本站</a></li>
+                            <li><a href="#">关于站长</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--主体-->
+    <div class="outer-wrap">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 header-cover">
+                <nav class="navbar navbar-default">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!--左上角Logo和点击后的链接-->
+                        <a class="navbar-brand" href="~/Home/Index">
+                            <img src="~/Content/img/OA_img/logo.png" alt="Logo">
+                            <!-- <span class="site-header">Faslush</span> -->
+                        </a>
+                    </div>
+                    <!--上方的导航栏-->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="menu-item-has-children">
+                                <a href="javascript:void(0)">首页</a>
+                                <ul class="sub-menu">
+                                    <li><a href="~/Home/Index">就是首页</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="menu-item-has-children">
+                                <a href="javascript:void(0)">OA</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)">A</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">A中的内容</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="menu-item-has-children">
+                                <a href="javascript:void(0)">神灯商店</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">吃货屋</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="menu-item-has-children">
+                                <a href="javascript:void(0)">工具</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">有趣工具</a></li>
+                                    <li><a href="#">实用工具</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!--子页入口-->
+                <div class="header-nav-wrap">
+                    <ul class="header-nav">
+
+                        @RenderBody()
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--广告栏-->
+<div class="full-banner hero-banner banner-wrap sec-gap-2 v2">
+    <ul class="banner-slide v2">
+        
+        <li>
+            <div class="banner-content">
+                <div class="banner-cover">
+                    <div class="inner">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7  col-sm-8  col-xs-12">
+                                    <h2 class="tri-font pri-color txt-ex-lg mb-0"> 乐在其中 </h2>
+                                    <h2 class="tri-font text-uppercase txt-lg"></h2>
+
+                                    <h6 class="mb-40">你的工作应该夹杂着生活</h6>
+
+                                    <a href="#" class="btn btn-default btn-lg">了解一下 <i class="fa  fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <figure class="img-hold"><img src="~/Content/img/OA_img/办公笔记本.jpg" alt=""></figure>
+        </li>
+
+        <li>
+            <div class="banner-content">
+                <div class="banner-cover">
+                    <div class="inner">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7  col-sm-8  col-xs-12">
+                                    <h2 class="tri-font pri-color txt-ex-lg mb-0"> 心若止水</h2>
+                                    <h2 class="tri-font text-uppercase txt-lg"></h2>
+
+                                    <h6 class="mb-40">用心投入，把生活过成向往</h6>
+
+                                    <a href="#" class="btn btn-default btn-lg">了解一下 <i class="fa  fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <figure class="img-hold"><img src="~/Content/img/OA_img/云雾城市.jpg" alt=""></figure>
+        </li>
+
+        <li>
+            <div class="banner-content">
+                <div class="banner-cover">
+                    <div class="inner">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7  col-sm-8  col-xs-12">
+                                    <h2 class="tri-font pri-color txt-ex-lg mb-0"> LONGING </h2>
+                                    <h2 class="tri-font text-uppercase txt-lg">Life is full of 80% nature</h2>
+
+                                    <h6 class="mb-40"></h6>
+
+                                    <a href="#" class="btn btn-default btn-lg">Look <i class="fa  fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <figure class="img-hold"><img src="~/Content/img/OA_img/山湖人.jpg"></figure>
+        </li>
+    </ul>
+</div>
+
+<!--三个横着的模块-->
+<main>
+    <div class="feature-cat sec-gap">
+        <div class="outer-wrap">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="wrap top-lft image-effect">
+                        <a href="~/User/OA/Index" class="cover-link">&nbsp;</a>
+                        <div class="content deeper">
+                            <h4>办公自动化</h4>
+                            <p>轻松管理的OA系统，简约风格</p>
+                            <a href="~/User/OA/Index" class="btn bdr">立马掌控 <i class="fa  fa-angle-right"></i></a>
+                        </div>
+                        <figure><img src="~/Content/img/OA_img/办公室.jpg" alt=""></figure>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="wrap top-lft image-effect">
+                        <a href="#" class="cover-link">&nbsp;</a>
+                        <div class="content deeper">
+                            <h4>神灯的商店</h4>
+                            <p>在线支付</p>
+                            <a href="#" class="btn bdr">进去看看 <i class="fa  fa-angle-right"></i></a>
+                        </div>
+                        <figure><img src="~/Content/img/OA_img/商场.jpg" alt=""></figure>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="wrap top-lft image-effect">
+                        <a href="~/User/Tools/Index" class="cover-link">&nbsp;</a>
+                        <div class="content deeper">
+                            <h4>工具箱</h4>
+                            <p>免费的有趣实用工具</p>
+                            <a href="~/User/Tools/Index" class="btn bdr">立即使用 <i class="fa  fa-angle-right"></i></a>
+                        </div>
+                        <figure><img src="~/Content/img/OA_img/工具.jpg" alt=""></figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!--友情链接-->
+<footer class="footer2 bg-gray">
+    <div class="container">
+        <div class="footer-top">
+            <div class="row">
+                <div class="col-md-5 col-sm-5 col-xs-12">
+                    <h3>友情链接</h3>
+
+                    @*<div class="subscription">
+                        <form action="#">
+                            <input type="text" placeholder="留下你的分享">
+                            <button type="submit">分享 <i class="fa fa-long-arrow-right"></i></button>
+                        </form>
+                    </div>*@
+                </div>
+
+                <div class="col-md-5 col-sm-6 col-xs-12 pull-right">
+                    <ul class="footer-menu">
+                        <li><a href="http://www.cnblogs.com/shendeng23/" target="_blank">我的博客</a></li>
+                        <li><a href="https://github.com/xiaobinwu23/ShenDeng" target="_blank">我的Github</a></li>
+                        <li><a href="#">我关注的</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--最下面的黑条-->
+    <div class="footer-bottom bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 copyright">
+                    &copy;2018-湖南文理学院-明天工作室 <strong>平凡的神灯</strong>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <ul class="social pull-right">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+<!-- 返回顶部-->
+<a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>
+
+<!-- JS库 -->
+<script src="~/Content/js/OA/jquery-3.1.1.min.js"></script>
+<script src="~/Content/js/OA/bootstrap.min.js"></script>
+<script src="~/Content/js/OA/modernizr.js"></script>
+
+<!--jquery ui-->
+<script src="~/Content/js/OA/jquery-ui.js"></script>
+<script src="~/Content/js/OA/jquery-ui-touch-punch.js"></script>
+
+<!--jquery dl menu-->
+<script src="~/Content/js/OA/jquery.dlmenu.js"></script>
+
+<!--parallax-->
+<script src="~/Content/js/OA/parallax.min.js"></script>
+
+<!--Count Down-->
+<script src="~/Content/js/OA/countdown.js"></script>
+
+<!--slider-->
+<script src="~/Content/js/OA/slick.min.js"></script>
+
+<!-- Counter -->
+<script src="~/Content/js/OA/jquery.counterup.min.js"></script>
+<script src="~/Content/js/OA/jquery.waypoints.min.js"></script>
+
+<!-- Full page -->
+<script src="~/Content/js/OA/jquery.fullpage.min.js"></script>
+
+<!--Costom js-->
+<script src="~/Content/js/OA/main.js"></script>
+</body>
+
+</html>
